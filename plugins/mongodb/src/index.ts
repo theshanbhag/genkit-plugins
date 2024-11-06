@@ -47,12 +47,8 @@ export const mongodb: Plugin<[PluginOptions] | []> = genkitPlugin(
       },
     ];
     const results = await collection.aggregate(query_object).toArray();
-    console.log('>>>>>>>>>>>>>>>>>>>>>>>');
-    console.log(results);
-    console.log('>>>>>>>>>>>>>>>>>>>>>>>');
-    return {
-      models: [],
-    };
+  
+    return results;
   }
 );
 
